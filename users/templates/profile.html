@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='row'>
+  <div  class='p-2 border bg-light col-10 col-sm-10 col-md-10 m-auto'>
+         
+          <p style='text-align:center'>My Profile </p>
+          <p style='text-align:center'>
+          <img class="bd-placeholder-img  bg-dark text-center"  width="60%" height="140" src='{{profiles.image.url}}' alt='{{profiles.user.username}}' preserveAspectRatio="xMidYMid slice" focusable="false">
+          </p>
+  
+  
+       <p class='p-2 ml-2' >Username &nbsp: {{profiles.user.username}}</p>
+       <p class='p-2 ml-2' >Email &nbsp: {{profiles.user.email}}</p>
+  
+  
+  
+  
+  
+  {% if profiles.user == user %}
+      <a href="{% url 'update_profile' profiles.id%}" style='text-decoration:none'>
+      <button class="w-100 btn btn-md btn-primary" style='margin-top:2em; ' type="submit">Update</button>
+      </a>
+  {% endif %}
+  
+  
+  
+  </div>
+  
+          </div>
+        </div>
+  </div>
+  </div>
+  
+  {% endblock content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ profiles.user.username }}</h2>
+          <p class="text-secondary">{{ profiles.user.email }}</p>
+        </div>
+      </div>
+              <button class="btn btn-outline-info" type="submit">Update</button>
+    </div>
