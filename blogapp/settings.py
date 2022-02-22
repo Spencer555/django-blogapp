@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 # DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = [localhost, ".herokuapp.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".herokuapp.com"]
 
 
 # Application definition
