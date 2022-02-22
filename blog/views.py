@@ -64,9 +64,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     
     
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    template_name = 'postscreateview.html'
+    template_name = 'postsupdateview.html'
     model  = Post 
-    fields = ['title', 'body']
+    form_class = PostForm
     
     
     def form_valid(self, form):
@@ -85,6 +85,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
     template_name = 'postdeleteview.html'
+    context_object_name ='post'
 
 
     def test_func(self):

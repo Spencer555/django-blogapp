@@ -2,16 +2,16 @@
 {% block content %}
 
 <div class='row'>
-  <div  class='p-2 border bg-light col-10 col-sm-10 col-md-10 m-auto'>
+  <div  class='p-2 bg-dark col-10 col-sm-10 col-md-10 m-auto' style="border-radius: 1em;">
          
-          <p style='text-align:center'>My Profile </p>
+          <p style='text-align:center; color:white'>My Profile </p>
           <p style='text-align:center'>
           <img class="bd-placeholder-img  bg-dark text-center"  width="60%" height="140" src='{{profiles.image.url}}' alt='{{profiles.user.username}}' preserveAspectRatio="xMidYMid slice" focusable="false">
           </p>
   
   
-       <p class='p-2 ml-2' >Username &nbsp: {{profiles.user.username}}</p>
-       <p class='p-2 ml-2' >Email &nbsp: {{profiles.user.email}}</p>
+       <p class='p-2 ml-2 text-white' style="text-align: left;">Username &nbsp: {{profiles.user.username}}</p>
+       <p class='p-2 ml-2 text-white' style="text-align: left;">Email &nbsp: {{profiles.user.email}}</p>
   
   
   

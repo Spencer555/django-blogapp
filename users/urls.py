@@ -8,7 +8,7 @@ from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, 
 urlpatterns = [
     path('register/', register, name='register'),
     
-    path('update_user/', change_password, name='change_password'),
+    path('change_password/', change_password, name='change_password'),
     
     path('login/', login, name='login'),
     

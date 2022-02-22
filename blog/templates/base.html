@@ -75,10 +75,12 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
-      
+      .mb-3 label{
+        color:white;
+      }
     </style>
 </head>
-<body>
+<body style="background-color: #000">
 
   <nav class="navbar navbar-expand-lg navbar-dark navbar1" >
     <div class="container-fluid" style='color:white'>
@@ -157,7 +159,7 @@
                 {% endfor %} {% endif %} 
             </div>
             </div>
-        <div class="col-md-8 m-auto">
+        <div class="col-12 m-auto ">
         
           {% block content %}{% endblock %}
         </div>

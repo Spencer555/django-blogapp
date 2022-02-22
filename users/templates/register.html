@@ -4,31 +4,31 @@
     <form method="POST">
       {% csrf_token %}
   
-      <h1 class="h3 mb-3 fw-normal">SignUP</h1>
+      <h1 class="h3 mb-3 fw-normal text-white">SignUP</h1>
   
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="Username" required name="username">
-        <label for="floatingInput">Username</label>
+        <label for="floatingInput" class="text-dark">Username</label>
       </div>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="Email" required name="email">
-        <label for="floatingInput">Email address</label>
+        <label for="floatingInput" class="text-dark">Email address</label>
       </div>
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required name='password'>
-        <label for="floatingPassword">Password</label>
+        <label for="floatingPassword" class="text-dark">Password</label>
       </div>
   
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password" required name='confirm_password'>
-        <label for="floatingPassword">Confirm Password</label>
+        <label for="floatingPassword" class="text-dark">Confirm Password</label>
       </div>
   
       <button class="w-100 btn btn-sm btn-primary" type="submit">Sign Up</button>
   
   </form>
-  <div class="border-top pt-3">
-      <small class="text-muted">
+  <div class=" pt-3">
+      <small class="text-white">
           Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Login</a>
       </small>
   </div>

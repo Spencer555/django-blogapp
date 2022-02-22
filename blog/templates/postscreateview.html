@@ -3,9 +3,9 @@
 <form method="POST">
  {% csrf_token %}
 <div class="mb-3">
-    <legend class="border-bottom mb-4">Add Blog Post</legend>
+    <legend class="border-bottom mb-4 text-white">Add Blog Post</legend>
          {{form}}    
       </div>
-      <button class="btn btn-sm btn-outline-primary w-100" type="submit">Add Post</button>
+      <button class="btn btn-sm btn-primary w-100" type="submit">Add Post</button>
   </form>
   {% endblock content %}

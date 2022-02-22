@@ -54,14 +54,14 @@ def change_password(request):
             if user.check_password(old_password) == True:
                 user.set_password(new_password)
                 user.save()
-                messages.info(request, 'Password Successfully Changed')
+                messages.info(request, 'Password Successfully Changed ')
                 return redirect('login')
 
             else:
-                messages.info(request, 'Wrong Password')
+                messages.info(request, 'Wrong Password ')
             
         else:
-            messages.info(request, 'Passwords do not match.')
+            messages.info(request, 'Passwords do not match. ')
 
 
     return render(request, 'password_change.html')

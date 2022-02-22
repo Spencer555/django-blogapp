@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="POST">
+<form method="POST" >
  {% csrf_token %}
 <div class="mb-3">
-    <legend class="border-bottom mb-4">Update Blog Post</legend>
+    <legend class="border-bottom mb-4 text-white">Update Blog Post</legend>
          {{form}}    
       </div>
-      <button class="btn btn-sm btn-outline-primary w-100" type="submit">Add Post</button>
+      <button class="btn btn-sm btn-primary w-100" type="submit">Update Post</button>
   </form>
   {% endblock content %}
 

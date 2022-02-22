@@ -2,20 +2,20 @@
 {% block content %}
 
 
-<div class="card m-auto" style="width: 30rem;">
+<div class="card m-auto bg-dark" style="width: 30rem;">
   <img src="{{ posts.creator.profile.image.url}}" class="card-img-top" alt="{{posts.creator.profile.image}}">
   <div class="card-body">
-    <h5 class="card-title">{{posts.title|capfirst}}</h5>
-    <p class="card-text">{{posts.body}}</p>
+    <h5 class="card-title text-white">{{posts.title|capfirst}}</h5>
+    <p class="card-text text-white">{{posts.body}}</p>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{posts.creator|capfirst}}</li>
-    <li class="list-group-item">{{posts.created|date:"F d, Y"}}</li>
-  </ul>
+  <div class="card-body">
+    <p class="card-title text-white" style="text-align: left;">Owner : {{posts.creator|capfirst}}</p>
+    <p class="card-text text-white" style="text-align: left;">Date Posted : {{posts.created|date:"F d, Y"}}</p>
+  </div>
       {% if posts.creator == user %}
-      <div class="card-body">
-        <a href="#" class="card-link link btn btn-sm btn-outline-success">Update</a>
-        <a href="#" class="card-link link btn btn-sm btn-outline-danger">Delete</a>
+      <div class="card-body d-flex justify-content-between">
+        <a href="{% url 'post-update' posts.id%}" class="card-link link btn btn-lg btn-outline-success">Update</a>
+        <a href="{% url 'post-delete' posts.id%}" class="card-link link btn btn-lg btn-outline-danger">Delete</a>
     
       </div>
  {% endif %}    
